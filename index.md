@@ -29,7 +29,25 @@ Federated Learnign (FL, Fig 1c) combines Local and Centralized Learning. The mod
 
 ### Swarm Learning
 
-Swarm Learning (SL, Fig 1d) aims to resolve the final issue with FL by removing the cetral authority. Instead of sharing the model parameters and merging them on the central server the paramters are merged to a shared model and distributed fairly via blockchain.
+Swarm Learning (SL) is a decentralized machine learning framework that combines edge computing with blockchain technology to enable secure, privacy-preserving, and collaborative model training. Unlike traditional federated learning, which relies on a central server for model coordination and aggregation, SL operates without any central authority. Instead, it employs a permissioned blockchain network to orchestrate peer-to-peer interactions, allowing participants (nodes) to dynamically join, contribute, and govern the model collaboratively.
+
+Each participating node in the SL network trains a local instance of a machine learning model on its own private data. At predefined synchronization intervals, the model parameters—not the data—are exchanged among the peers. The parameters are merged into a shared global model using a consensus algorithm (typically a weighted average), and the updated parameters are then redistributed to all nodes for the next training iteration. This process is governed through smart contracts on a blockchain, which ensures transparency, auditability, and fairness in coordination.
+
+The SL framework consists of two key layers:
+1. Application layer - containing the machine learning model and task-specific logic.
+2. Middleware layer - comprising the Swarm Learning Library (SLL), the Swarm API, and the blockchain-based orchestration mechanisms.
+
+Warnat-Herresthal et al. used Docker Containers to simulate between 3 and 32 sperate nodes on a swarm network, each with its own dataset. Each node implented the SL framework and used a straightforward deep neural network using Keras to do the training. The models were trained for 100 epochs an vorying batch sizes.
+
+Crucially, SL supports the use of heterogeneous hardware and variable network conditions. It is implemented in Docker containers and supports execution on dedicated machines or clusters. Identity management and node authorization are enforced using frameworks like SPIRE (based on SPIFFE). Synchronization intervals, merging strategies, and weighting schemes are configurable to balance performance and computational efficiency.
+
+By design, Swarm Learning ensures:
+- Confidentiality: No raw data leaves the institution.
+- Resilience: No single point of failure due to decentralization.
+- Democratization: Equal participation rights among collaborators.
+- Security: Smart contracts regulate membership and consensus.
+
+In summary, Swarm Learning provides a robust technical foundation for confidential and collaborative AI development, especially suitable for sensitive domains like medicine where data sharing is legally restricted but collaboration is essential.
 
 ![Fig. 1 - ML Techniques](/docs/assets/images/ml-techniken.png)
 *Fig 1: ML Techniques*
