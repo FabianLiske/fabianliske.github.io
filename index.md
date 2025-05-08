@@ -23,7 +23,7 @@ In conventional machine learning, especially in healthcare, models are often tra
 
 ### Swarm Learning
 
-[Fig. 1 - ML Techniques](/docs/assets/images/ml-techniken.png)
+![Fig. 1 - ML Techniques](/docs/assets/images/ml-techniken.png)
 
 ## Usage in Medical AI
 
