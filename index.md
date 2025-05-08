@@ -144,7 +144,7 @@ Although SL removes the need for a central coordinator, it introduces new govern
 Despite keeping data local, SL may still be vulnerable to model inversion or membership inference attacks through shared parameters. While SL improves over federated learning by reducing single-point-of-failure risk, full protection against adversarial behavior may require integrating differential privacy and further cryptographic safeguards, which were not part of current implementations.
 
 ### Regulatory and Ethical Considerations
-Cross-border collaboration on medical data—even without sharing raw data—must align with diverse legal frameworks such as GDPR, HIPAA, and institutional review policies. SL’s design is compatible with many regulations in theory, but legal interpretations may vary and affect adoption in practice.
+Cross-border collaboration on medical data - even without sharing raw data - must align with diverse legal frameworks such as GDPR, HIPAA, and institutional review policies. SL’s design is compatible with many regulations in theory, but legal interpretations may vary and affect adoption in practice.
 
 ### Lack of Standardization and Validation
 SL has been successfully demonstrated in use cases such as colorectal cancer histopathology, leukemia classification, and COVID-19 transcriptomics, but broader validation across clinical settings and data types is still lacking. Especially in critical applications, robust external validation and clinical benchmarking are essential before deployment.
