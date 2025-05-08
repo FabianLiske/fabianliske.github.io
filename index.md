@@ -78,11 +78,9 @@ SL performs robustly across heterogeneous datasets from multiple institutions, s
 
 ### SL in Cancer Histopathology
 
-SL in Cancer Histopathology
-
 Cancer histopathology - analyzing stained tissue slides under the microscope - is a cornerstone of cancer diagnosis. With the advent of digital pathology and AI, researchers have begun to explore how deep learning models can extract subtle, clinically relevant patterns from these high-resolution images. However, developing robust AI systems requires training on large and diverse datasets, which is often impossible due to legal and logistical barriers to data sharing between institutions.
 
-Swarm Learning (SL) addresses these challenges by enabling multiple pathology centers to collaboratively train AI models without moving data outside institutional boundaries. In a landmark study, Saldanha et al. demonstrated the use of SL to predict clinically important molecular features in colorectal cancer - specifically BRAF mutational status and microsatellite instability (MSI) - directly from hematoxylin and eosin (H&E)-stained slides.
+SL addresses these challenges by enabling multiple pathology centers to collaboratively train AI models without moving data outside institutional boundaries. In a landmark study, Saldanha et al. demonstrated the use of SL to predict clinically important molecular features in colorectal cancer - specifically BRAF mutational status and microsatellite instability (MSI) - directly from hematoxylin and eosin (H&E)-stained slides.
 
 Three large datasets from institutions in Northern Ireland, Germany, and the United States were used, each stored on physically separate servers. Each node trained a local model and participated in periodic synchronization rounds via a blockchain-based SL network. The study compared locally trained models, a centralized (merged) model, and various SL models (both basic and weighted).
 
@@ -92,7 +90,21 @@ The findings were compelling:
 - Explainability: SL models highlighted histologically relevant regions in slide-level heatmaps, and human experts rated these regions as more plausible compared to those of locally trained models.
 - Generalizability: SL models were validated on independent UK-based cohorts and maintained high performance, showing their potential to generalize across populations and institutions.
 
-### SL in Detection of Leukaemia
+### SL in Detection of Leukemia
+
+Leukemia diagnosis increasingly benefits from molecular profiling, particularly transcriptome analysis of blood cells. However, creating reliable AI-based classifiers requires large and diverse training datasets—something difficult to achieve in a clinical setting due to data privacy regulations and institutional silos.
+
+Warnat-Herresthal et al. demonstrated how SL can overcome these barriers by enabling decentralized training of deep learning models on blood transcriptomes without data exchange . Using peripheral blood mononuclear cell (PBMC) transcriptomes from over 12,000 individuals across more than 100 clinical studies, they trained classifiers to detect acute myeloid leukemia (AML) and acute lymphoblastic leukemia (ALL).
+
+Each dataset was distributed across multiple SL nodes, mimicking real-world institutional separation. The SL framework allowed these nodes to collaboratively train a shared model, coordinating parameter updates via a permissioned blockchain.
+
+Key results included:
+- Superior accuracy: Across various scenarios - including imbalanced case-control distributions and different data modalities (microarrays, RNA-seq) - SL consistently outperformed locally trained models and often matched the performance of centrally trained models.
+- Robustness to heterogeneity: SL performed well even when data was split by platform (e.g., different sequencing technologies) or geographic origin, demonstrating resilience to batch effects and technical variability.
+- Scalability and flexibility: The system scaled effectively from 3 up to 32 nodes. It also supported delayed node participation, showing that institutions can join an ongoing SL network without disrupting training.
+- Algorithm independence: Although deep neural networks were used in most experiments, the authors also implemented logistic regression via LASSO in SL—demonstrating that the framework is model-agnostic.
+
+These results show that SL enables the development of high-performance, privacy-preserving diagnostic tools for leukemia, and could lay the foundation for broader adoption of decentralized AI in molecular diagnostics.
 
 ### SL in Detection of Tuberculosis
 
