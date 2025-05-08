@@ -29,13 +29,53 @@ Federated Learnign (FL, Fig 1c) combines Local and Centralized Learning. The mod
 
 ### Swarm Learning
 
-Swarm Learning (SL, Fig 1d) aims to resolve the final issue with FL by removing the cetral authority. Instead of sharing the model parameters and merging them on the central server the paramters are merged to a shared model and distributed fairly via blockchain.
+Swarm Learning (SL) is a decentralized machine learning framework that combines edge computing with blockchain technology to enable secure, privacy-preserving, and collaborative model training. Unlike traditional federated learning, which relies on a central server for model coordination and aggregation, SL operates without any central authority. Instead, it employs a permissioned blockchain network to orchestrate peer-to-peer interactions, allowing participants (nodes) to dynamically join, contribute, and govern the model collaboratively.
+
+Each participating node in the SL network trains a local instance of a machine learning model on its own private data. At predefined synchronization intervals, the model parameters—not the data—are exchanged among the peers. The parameters are merged into a shared global model using a consensus algorithm (typically a weighted average), and the updated parameters are then redistributed to all nodes for the next training iteration. This process is governed through smart contracts on a blockchain, which ensures transparency, auditability, and fairness in coordination.
+
+The SL framework consists of two key layers:
+1. Application layer - containing the machine learning model and task-specific logic.
+2. Middleware layer - comprising the Swarm Learning Library (SLL), the Swarm API, and the blockchain-based orchestration mechanisms.
+
+Warnat-Herresthal et al. used Docker Containers to simulate between 3 and 32 sperate nodes on a swarm network, each with its own dataset. Each node implented the SL framework and used a straightforward deep neural network using Keras to do the training. The models were trained for 100 epochs an vorying batch sizes.
+
+Crucially, SL supports the use of heterogeneous hardware and variable network conditions. It is implemented in Docker containers and supports execution on dedicated machines or clusters. Identity management and node authorization are enforced using frameworks like SPIRE (based on SPIFFE). Synchronization intervals, merging strategies, and weighting schemes are configurable to balance performance and computational efficiency.
+
+By design, Swarm Learning ensures:
+- Confidentiality: No raw data leaves the institution.
+- Resilience: No single point of failure due to decentralization.
+- Democratization: Equal participation rights among collaborators.
+- Security: Smart contracts regulate membership and consensus.
+
+In summary, Swarm Learning provides a robust technical foundation for confidential and collaborative AI development, especially suitable for sensitive domains like medicine where data sharing is legally restricted but collaboration is essential.
 
 ![Fig. 1 - ML Techniques](/docs/assets/images/ml-techniken.png)
 *Fig 1: ML Techniques*
 
-## Usage in Medical AI
-
 ## Benefits of Swarm Learning in Medical AI
+
+Swarm Learning (SL) offers a number of concrete benefits for the development and deployment of AI in healthcare settings, especially when data privacy, decentralization, and regulatory compliance are critical concerns.
+
+### Privacy-preserving collaboration
+
+SL allows multiple institutions to collaboratively train machine learning models without exchanging raw patient data. This is achieved by sharing model parameters via a blockchain-based peer-to-peer network rather than centralizing data, which helps address legal and ethical concerns around data sovereignty and patient confidentiality.
+
+### Decentralized trust and fairness
+
+Unlike Federated Learning, which relies on a central coordinator to merge model updates, SL uses blockchain-based consensus mechanisms to enable fully decentralized and equal participation. This avoids monopolistic control over the model and encourages broader collaboration across institutions and countries. Fairness can be further improved by adjusting the weighting of model parameters in the merging process based on local dataset size.
+
+### Data efficiency and scalability
+
+SL improves the data efficiency of AI training. Even when each participating node contributes only a small dataset, SL is able to produce models with high predictive performance. This makes it particularly suitable for medical applications, where individual datasets may be limited in size due to privacy constraints, geographic separation or rarity of conditions.
+
+### Explainability and robustness
+
+SL models exhibit greater consistency and plausibility in their predictions. Reader studies have shown that image regions highlighted by SL models for decision-making often contain histologically relevant features, indicating that these models learn meaningful and interpretable representations.
+
+### Resilience to bias and heterogeneity
+
+SL performs robustly across heterogeneous datasets from multiple institutions, showing resistance to batch effects and technical variations. This improves model generalizability across different clinical settings and populations.
+
+## Usage in Medical AI
 
 ## Challenges
