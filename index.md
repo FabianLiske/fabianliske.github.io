@@ -11,6 +11,8 @@ In areas with limited access to expert care, AI can act as a virtual second opin
 
 But while the potential of AI in medicine is widely recognized, its implementation is often slowed. As healthcare is inherently decentralized, data is usually decentralized as well. Data privacy regulations and ethical concerns also hinder the creation of large, centralized datasets for training medical AI models. Swarm Learning offers a promising solution to these challenges - enabling collaborative AI development without the need to share raw patient data.
 
+---
+
 ## What is Swarm Learning
 
 In conventional machine learning, especially in healthcare, models are often trained on data that has been centralized — typically collected and stored in large data centers or cloud platforms. While this setup can be effective, it raises major concerns around data privacy, ownership, and compliance with regulations like GDPR or HIPAA.
