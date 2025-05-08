@@ -1,6 +1,4 @@
 title: Seminar
 markdown: kramdown
 #theme: minima
-remote_theme: That-Thing/jekyll-scula
-plugins:
-  - jekyll-remote-theme
+remote_theme: "dracula/gh-pages"
