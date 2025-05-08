@@ -108,6 +108,17 @@ These results show that SL enables the development of high-performance, privacy-
 
 ### SL in Detection of Tuberculosis
 
+Tuberculosis (TB) remains one of the world’s leading infectious diseases, particularly in low-resource settings where diagnostic capacity can be limited. Transcriptomic profiling of blood has emerged as a promising tool for distinguishing active from latent TB infections, but AI models trained on such data face the usual challenge: data privacy restrictions limit access to sufficiently large and diverse datasets.
+
+Using SL, researchers demonstrated that robust TB classifiers can be trained collaboratively without centralizing data. In their study, blood transcriptome datasets from nearly 2,000 individuals were distributed across SL nodes simulating distinct institutions. Each node trained locally on its data while synchronizing model parameters over a blockchain network.
+
+Several realistic scenarios were tested:
+- Balanced and imbalanced case distributions: Even when the number of active TB cases varied widely between nodes, SL maintained high classification performance, outperforming local models and often matching centralized approaches.
+- Low-prevalence test sets: In simulations mimicking outbreak detection (e.g., 1 active case per 20 controls), SL models remained robust and sensitive, while local models degraded significantly.
+- Network scalability: When the training network was expanded from 3 to 6 nodes—each with smaller data partitions—individual model performance dropped, but the SL model’s performance remained stable.
+
+These results show that SL not only protects patient privacy but also enhances model generalization and robustness, particularly in scenarios with data imbalance or low signal strength. This makes SL highly suitable for collaborative AI efforts in infectious disease diagnostics, especially where data decentralization is the norm.
+
 ## Challenges
 
 ## Sources
