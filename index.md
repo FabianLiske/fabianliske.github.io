@@ -127,20 +127,6 @@ These results show that SL not only protects patient privacy but also enhances m
 
 ---
 
-## Challenges
-
-Platzhalter
-
----
-
-## Sources
-
-[Swarm Learning: A Survey of Concepts, Applications and Trends](https://arxiv.org/abs/2405.00556)
-
-[Swarm learning for decentralized artificial intelligence in cancer histopathology](https://doi.org/10.1038/s41591-022-01768-5)
-
-[Swarm Learning for decentralized and confidential clinical machine learning](https://doi.org/10.1038/s41586-021-03583-3)
-
 ## Challenges of Swarm Learning in Medical AI
 
 While Swarm Learning (SL) holds great promise for privacy-preserving, decentralized AI in healthcare, several technical and practical challenges remain before its widespread clinical deployment.
@@ -162,3 +148,13 @@ Cross-border collaboration on medical data—even without sharing raw data—mus
 
 **6. Lack of Standardization and Validation**
 SL has been successfully demonstrated in use cases such as colorectal cancer histopathology, leukemia classification, and COVID-19 transcriptomics, but broader validation across clinical settings and data types is still lacking. Especially in critical applications, robust external validation and clinical benchmarking are essential before deployment.
+
+---
+
+## Sources
+
+[Swarm Learning: A Survey of Concepts, Applications and Trends](https://arxiv.org/abs/2405.00556)
+
+[Swarm learning for decentralized artificial intelligence in cancer histopathology](https://doi.org/10.1038/s41591-022-01768-5)
+
+[Swarm Learning for decentralized and confidential clinical machine learning](https://doi.org/10.1038/s41586-021-03583-3)
