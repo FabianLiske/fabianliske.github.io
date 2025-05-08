@@ -124,5 +124,7 @@ These results show that SL not only protects patient privacy but also enhances m
 ## Sources
 
 [Swarm Learning: A Survey of Concepts, Applications and Trends](https://arxiv.org/abs/2405.00556)
+
 [Swarm learning for decentralized artificial intelligence in cancer histopathology](https://doi.org/10.1038/s41591-022-01768-5)
+
 [Swarm Learning for decentralized and confidential clinical machine learning](https://doi.org/10.1038/s41586-021-03583-3)
