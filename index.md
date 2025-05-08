@@ -34,8 +34,30 @@ Swarm Learning (SL, Fig 1d) aims to resolve the final issue with FL by removing 
 ![Fig. 1 - ML Techniques](/docs/assets/images/ml-techniken.png)
 *Fig 1: ML Techniques*
 
-## Usage in Medical AI
-
 ## Benefits of Swarm Learning in Medical AI
+
+Swarm Learning (SL) offers a number of concrete benefits for the development and deployment of AI in healthcare settings, especially when data privacy, decentralization, and regulatory compliance are critical concerns.
+
+### Privacy-preserving collaboration
+
+SL allows multiple institutions to collaboratively train machine learning models without exchanging raw patient data. This is achieved by sharing model parameters via a blockchain-based peer-to-peer network rather than centralizing data, which helps address legal and ethical concerns around data sovereignty and patient confidentiality.
+
+### Decentralized trust and fairness
+
+Unlike Federated Learning, which relies on a central coordinator to merge model updates, SL uses blockchain-based consensus mechanisms to enable fully decentralized and equal participation. This avoids monopolistic control over the model and encourages broader collaboration across institutions and countries. Fairness can be further improved by adjusting the weighting of model parameters in the merging process based on local dataset size.
+
+### Data efficiency and scalability
+
+SL improves the data efficiency of AI training. Even when each participating node contributes only a small dataset, SL is able to produce models with high predictive performance. This makes it particularly suitable for medical applications, where individual datasets may be limited in size due to privacy constraints, geographic separation or rarity of conditions.
+
+### Explainability and robustness
+
+SL models exhibit greater consistency and plausibility in their predictions. Reader studies have shown that image regions highlighted by SL models for decision-making often contain histologically relevant features, indicating that these models learn meaningful and interpretable representations.
+
+### Resilience to bias and heterogeneity
+
+SL performs robustly across heterogeneous datasets from multiple institutions, showing resistance to batch effects and technical variations. This improves model generalizability across different clinical settings and populations.
+
+## Usage in Medical AI
 
 ## Challenges
