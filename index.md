@@ -78,7 +78,19 @@ SL performs robustly across heterogeneous datasets from multiple institutions, s
 
 ### SL in Cancer Histopathology
 
+SL in Cancer Histopathology
 
+Cancer histopathology - analyzing stained tissue slides under the microscope - is a cornerstone of cancer diagnosis. With the advent of digital pathology and AI, researchers have begun to explore how deep learning models can extract subtle, clinically relevant patterns from these high-resolution images. However, developing robust AI systems requires training on large and diverse datasets, which is often impossible due to legal and logistical barriers to data sharing between institutions.
+
+Swarm Learning (SL) addresses these challenges by enabling multiple pathology centers to collaboratively train AI models without moving data outside institutional boundaries. In a landmark study, Saldanha et al. demonstrated the use of SL to predict clinically important molecular features in colorectal cancer - specifically BRAF mutational status and microsatellite instability (MSI) - directly from hematoxylin and eosin (H&E)-stained slides.
+
+Three large datasets from institutions in Northern Ireland, Germany, and the United States were used, each stored on physically separate servers. Each node trained a local model and participated in periodic synchronization rounds via a blockchain-based SL network. The study compared locally trained models, a centralized (merged) model, and various SL models (both basic and weighted).
+
+The findings were compelling:
+- Performance: SL models consistently outperformed locally trained models and matched or exceeded the performance of the centrally trained model. For instance, the weighted SL model achieved an AUROC of 0.7736 in BRAF mutation prediction, outperforming both the best local model and the merged model.
+- Data Efficiency: SL showed high resilience when training data was limited. Even with small datasets (e.g., 100 patients per node), SL achieved robust performance—something individual models failed to do.
+- Explainability: SL models highlighted histologically relevant regions in slide-level heatmaps, and human experts rated these regions as more plausible compared to those of locally trained models.
+- Generalizability: SL models were validated on independent UK-based cohorts and maintained high performance, showing their potential to generalize across populations and institutions.
 
 ### SL in Detection of Leukaemia
 
