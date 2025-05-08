@@ -3,6 +3,23 @@ layout: default
 title: Startseite
 ---
 
-Das ist meine Jekyll-Website mit einer einzigen Seite.
+# Header 1
 
-Hier ist **Markdown** möglich!
+## Header 2
+
+### Header 3
+
+**Fett**
+
+*Kursiv*
+
+Normal
+
+- Liste
+- Liste
+
+* andere Liste
+* andere Liste
+
+1. Noch ne Liste
+1. Noch ne Liste
