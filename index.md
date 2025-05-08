@@ -32,6 +32,7 @@ Federated Learnign (FL, Fig 1c) combines Local and Centralized Learning. The mod
 Swarm Learning (SL, Fig 1d) aims to resolve the final issue with FL by removing the cetral authority. Instead of sharing the model parameters and merging them on the central server the paramters are merged to a shared model and distributed fairly via blockchain.
 
 ![Fig. 1 - ML Techniques](/docs/assets/images/ml-techniken.png)
+*Fig 1: ML Techniques*
 
 ## Usage in Medical AI
 
