@@ -17,11 +17,19 @@ In conventional machine learning, especially in healthcare, models are often tra
 
 ### Local Learning
 
+Every participant can create their own model using their own data (Fig 1a). However this will result in worse models if the amount of data ervery participant has is insufficient, but no data has to be shared.
+
 ### Centralized Learning
+
+If all data can be centralized the training of a model can also be performed on a central copmute resource, for example in the cloud (Fig 1b). This typically results in better performance than locally trained models.
 
 ### Federated Learning
 
+Federated Learnign (FL, Fig 1c) combines Local and Centralized Learning. The models are trained locally on locally stored data and the resulting model parameters are stored on a centralized server. While the users don't need to share their data centrally, there remains a central authority managing the model.
+
 ### Swarm Learning
+
+Swarm Learning (SL, Fig 1d) aims to resolve the final issue with FL by removing the cetral authority. Instead of sharing the model parameters and merging them on the central server the paramters are merged to a shared model and distributed fairly via blockchain.
 
 ![Fig. 1 - ML Techniques](/docs/assets/images/ml-techniken.png)
 
