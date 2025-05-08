@@ -1,25 +1,14 @@
 ---
 layout: default
-title: Startseite
+title: Swarm Learning in Medical AI
 ---
 
-# Header 1
+# The Importance of Swarm Learning
 
-## Header 2
+# What is Swarm Learning
 
-### Header 3
+# Usage in Medical AI
 
-**Fett**
+# Benefits of Swarm Learning in medical AI
 
-*Kursiv*
-
-Normal
-
-- Liste
-- Liste
-
-* andere Liste
-* andere Liste
-
-1. Noch ne Liste
-1. Noch ne Liste
+# Challenges
