@@ -13,6 +13,18 @@ But while the potential of AI in medicine is widely recognized, its implementati
 
 ## What is Swarm Learning
 
+In conventional machine learning, especially in healthcare, models are often trained on data that has been centralized — typically collected and stored in large data centers or cloud platforms. While this setup can be effective, it raises major concerns around data privacy, ownership, and compliance with regulations like GDPR or HIPAA.
+
+### Local Learning
+
+### Centralized Learning
+
+### Federated Learning
+
+### Swarm Learning
+
+[Fig. 1 - ML Techniques](/docs/assets/images/ml-techniken.png)
+
 ## Usage in Medical AI
 
 ## Benefits of Swarm Learning in Medical AI
