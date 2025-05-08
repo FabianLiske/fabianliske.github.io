@@ -47,8 +47,6 @@ By design, Swarm Learning ensures:
 - Democratization: Equal participation rights among collaborators.
 - Security: Smart contracts regulate membership and consensus.
 
-In summary, Swarm Learning provides a robust technical foundation for confidential and collaborative AI development, especially suitable for sensitive domains like medicine where data sharing is legally restricted but collaboration is essential.
-
 ![Fig. 1 - ML Techniques](/docs/assets/images/ml-techniken.png)
 *Fig 1: ML Techniques*
 
@@ -78,4 +76,53 @@ SL performs robustly across heterogeneous datasets from multiple institutions, s
 
 ## Usage in Medical AI
 
+### SL in Cancer Histopathology
+
+Cancer histopathology - analyzing stained tissue slides under the microscope - is a cornerstone of cancer diagnosis. With the advent of digital pathology and AI, researchers have begun to explore how deep learning models can extract subtle, clinically relevant patterns from these high-resolution images. However, developing robust AI systems requires training on large and diverse datasets, which is often impossible due to legal and logistical barriers to data sharing between institutions.
+
+SL addresses these challenges by enabling multiple pathology centers to collaboratively train AI models without moving data outside institutional boundaries. In a landmark study, Saldanha et al. demonstrated the use of SL to predict clinically important molecular features in colorectal cancer - specifically BRAF mutational status and microsatellite instability (MSI) - directly from hematoxylin and eosin (H&E)-stained slides.
+
+Three large datasets from institutions in Northern Ireland, Germany, and the United States were used, each stored on physically separate servers. Each node trained a local model and participated in periodic synchronization rounds via a blockchain-based SL network. The study compared locally trained models, a centralized (merged) model, and various SL models (both basic and weighted).
+
+The findings were compelling:
+- Performance: SL models consistently outperformed locally trained models and matched or exceeded the performance of the centrally trained model. For instance, the weighted SL model achieved an AUROC of 0.7736 in BRAF mutation prediction, outperforming both the best local model and the merged model.
+- Data Efficiency: SL showed high resilience when training data was limited. Even with small datasets (e.g., 100 patients per node), SL achieved robust performance—something individual models failed to do.
+- Explainability: SL models highlighted histologically relevant regions in slide-level heatmaps, and human experts rated these regions as more plausible compared to those of locally trained models.
+- Generalizability: SL models were validated on independent UK-based cohorts and maintained high performance, showing their potential to generalize across populations and institutions.
+
+### SL in Detection of Leukemia
+
+Leukemia diagnosis increasingly benefits from molecular profiling, particularly transcriptome analysis of blood cells. However, creating reliable AI-based classifiers requires large and diverse training datasets—something difficult to achieve in a clinical setting due to data privacy regulations and institutional silos.
+
+Warnat-Herresthal et al. demonstrated how SL can overcome these barriers by enabling decentralized training of deep learning models on blood transcriptomes without data exchange . Using peripheral blood mononuclear cell (PBMC) transcriptomes from over 12,000 individuals across more than 100 clinical studies, they trained classifiers to detect acute myeloid leukemia (AML) and acute lymphoblastic leukemia (ALL).
+
+Each dataset was distributed across multiple SL nodes, mimicking real-world institutional separation. The SL framework allowed these nodes to collaboratively train a shared model, coordinating parameter updates via a permissioned blockchain.
+
+Key results included:
+- Superior accuracy: Across various scenarios - including imbalanced case-control distributions and different data modalities (microarrays, RNA-seq) - SL consistently outperformed locally trained models and often matched the performance of centrally trained models.
+- Robustness to heterogeneity: SL performed well even when data was split by platform (e.g., different sequencing technologies) or geographic origin, demonstrating resilience to batch effects and technical variability.
+- Scalability and flexibility: The system scaled effectively from 3 up to 32 nodes. It also supported delayed node participation, showing that institutions can join an ongoing SL network without disrupting training.
+- Algorithm independence: Although deep neural networks were used in most experiments, the authors also implemented logistic regression via LASSO in SL—demonstrating that the framework is model-agnostic.
+
+These results show that SL enables the development of high-performance, privacy-preserving diagnostic tools for leukemia, and could lay the foundation for broader adoption of decentralized AI in molecular diagnostics.
+
+### SL in Detection of Tuberculosis
+
+Tuberculosis (TB) remains one of the world’s leading infectious diseases, particularly in low-resource settings where diagnostic capacity can be limited. Transcriptomic profiling of blood has emerged as a promising tool for distinguishing active from latent TB infections, but AI models trained on such data face the usual challenge: data privacy restrictions limit access to sufficiently large and diverse datasets.
+
+Using SL, researchers demonstrated that robust TB classifiers can be trained collaboratively without centralizing data. In their study, blood transcriptome datasets from nearly 2,000 individuals were distributed across SL nodes simulating distinct institutions. Each node trained locally on its data while synchronizing model parameters over a blockchain network.
+
+Several realistic scenarios were tested:
+- Balanced and imbalanced case distributions: Even when the number of active TB cases varied widely between nodes, SL maintained high classification performance, outperforming local models and often matching centralized approaches.
+- Low-prevalence test sets: In simulations mimicking outbreak detection (e.g., 1 active case per 20 controls), SL models remained robust and sensitive, while local models degraded significantly.
+- Network scalability: When the training network was expanded from 3 to 6 nodes—each with smaller data partitions—individual model performance dropped, but the SL model’s performance remained stable.
+
+These results show that SL not only protects patient privacy but also enhances model generalization and robustness, particularly in scenarios with data imbalance or low signal strength. This makes SL highly suitable for collaborative AI efforts in infectious disease diagnostics, especially where data decentralization is the norm.
+
 ## Challenges
+
+## Sources
+
+[Swarm Learning: A Survey of Concepts, Applications and Trends](https://arxiv.org/abs/2405.00556)
+[Swarm learning for decentralized artificial intelligence in cancer histopathology](https://doi.org/10.1038/s41591-022-01768-5)
+[Swarm Learning for decentralized and confidential clinical machine learning](https://doi.org/10.1038/s41586-021-03583-3)
