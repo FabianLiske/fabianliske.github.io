@@ -39,3 +39,25 @@ Swarm Learning (SL, Fig 1d) aims to resolve the final issue with FL by removing 
 ## Benefits of Swarm Learning in Medical AI
 
 ## Challenges
+
+Trotz der vielversprechenden Vorteile bringt die Implementierung von Swarm Learning (SL) in der medizinischen Praxis eine Reihe von Herausforderungen mit sich.
+
+### 1. **Nicht-IID-Daten und Heterogenität**
+
+In der medizinischen Realität sind Daten häufig **nicht unabhängig und identisch verteilt (non-IID)**. Patientenpopulationen unterscheiden sich in Alter, Geschlecht, Krankheitsverläufen und Messmethoden. Diese Heterogenität erschwert das Training robuster KI-Modelle. Zwar wurden in Studien gezielt Szenarien mit ungleich verteilten Krankheitsfällen oder technologiebedingten Unterschieden simuliert, jedoch bleibt die Herausforderung bestehen, Modelle zu trainieren, die trotz solcher Unterschiede generalisierbar sind.
+
+### 2. **Kommunikations- und Rechenaufwand**
+
+Swarm Learning nutzt eine Blockchain-basierte Architektur zur Koordination der teilnehmenden Knoten. Dies erhöht die **Kommunikationslatenz** und den **Rechenaufwand**, insbesondere bei großen Modellen und vielen Teilnehmern. Zwar gibt es erste Ansätze zur Optimierung der Parameteraggregation, etwa durch adaptive Merging-Funktionen oder gewichtete Updates, doch ist weitere Forschung notwendig, um die Effizienz in realen klinischen Szenarien zu verbessern.
+
+### 3. **Sicherheitsrisiken und Angriffe**
+
+Wie andere verteilte Lernsysteme ist auch SL potenziell anfällig für **böswillige Teilnehmer**, die manipulierte Modellparameter einspeisen (z. B. Backdoor-Attacken). Auch Blockchain-spezifische Angriffe wie **Eclipse- oder DDoS-Attacken** können die Integrität des Netzwerks gefährden. Fortschrittliche kryptografische Verfahren wie homomorphe Verschlüsselung oder Differential Privacy sind zwar vielversprechend, aber technisch aufwendig in der Implementierung.
+
+### 4. **Governance und Fairness**
+
+Während SL durch den Wegfall einer zentralen Instanz eine gleichberechtigte Zusammenarbeit fördern soll, bestehen weiterhin **Governance-Herausforderungen**. Wer trägt die Verantwortung für die Modellqualität? Wie werden Konflikte zwischen Knoten gelöst? Zudem müssen **Fairness-Aspekte** beachtet werden, um systematische Verzerrungen (z. B. durch unterrepräsentierte Patientengruppen) zu vermeiden.
+
+### 5. **Klinische Integration und Validierung**
+
+Ein zentrales Hindernis bleibt die **klinische Umsetzung**. Die SL-basierten Modelle müssen nicht nur datenschutzkonform, sondern auch **medizinisch valide, nachvollziehbar und robust** sein. Viele Studien sind bisher retrospektiv; prospektive klinische Validierungen stehen noch aus.
