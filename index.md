@@ -56,7 +56,7 @@ By design, Swarm Learning ensures:
 
 ## Benefits of Swarm Learning in Medical AI
 
-Swarm Learning (SL) offers a number of concrete benefits for the development and deployment of AI in healthcare settings, especially when data privacy, decentralization, and regulatory compliance are critical concerns.
+SL offers a number of concrete benefits for the development and deployment of AI in healthcare settings, especially when data privacy, decentralization, and regulatory compliance are critical concerns.
 
 ### Privacy-preserving collaboration
 
@@ -129,7 +129,7 @@ These results show that SL not only protects patient privacy but also enhances m
 
 ## Challenges of Swarm Learning in Medical AI
 
-While Swarm Learning (SL) holds great promise for privacy-preserving, decentralized AI in healthcare, several technical and practical challenges remain before its widespread clinical deployment.
+While SL holds great promise for privacy-preserving, decentralized AI in healthcare, several technical and practical challenges remain before its widespread clinical deployment.
 
 ### Infrastructure and Implementation Complexity
 Establishing a functional SL network requires substantial coordination across institutions. Nodes must maintain synchronized hardware capabilities and networking infrastructure to support training and communication, including integration of blockchain-based parameter exchange. Embedding SL nodes into existing clinical systems across international healthcare providers is a significant logistical undertaking that has not yet been widely tested outside of controlled research settings.
