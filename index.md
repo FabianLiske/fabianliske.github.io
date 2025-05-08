@@ -131,22 +131,22 @@ These results show that SL not only protects patient privacy but also enhances m
 
 While Swarm Learning (SL) holds great promise for privacy-preserving, decentralized AI in healthcare, several technical and practical challenges remain before its widespread clinical deployment.
 
-**1. Infrastructure and Implementation Complexity**
+### Infrastructure and Implementation Complexity
 Establishing a functional SL network requires substantial coordination across institutions. Nodes must maintain synchronized hardware capabilities and networking infrastructure to support training and communication, including integration of blockchain-based parameter exchange. Embedding SL nodes into existing clinical systems across international healthcare providers is a significant logistical undertaking that has not yet been widely tested outside of controlled research settings.
 
-**2. Model Performance and Scaling**
+### Model Performance and Scaling
 SL models often perform comparably to centrally trained models, but achieving optimal performance still depends on training data size and distribution. When cohorts are small, model performance may degrade unless strategies like weighted SL are applied. Moreover, performance parity with centralized models is harder to maintain in scenarios involving heterogeneous data sources or imaging modalities.
 
-**3. Governance and Fair Collaboration**
+### Governance and Fair Collaboration
 Although SL removes the need for a central coordinator, it introduces new governance questions: How are model contributions quantified and rewarded? How are model weights balanced among datasets of varying quality or size? Fairness mechanisms such as weighting by cohort size exist, but broader governance frameworks remain underdeveloped.
 
-**4. Privacy and Security Risks**
+### Privacy and Security Risks
 Despite keeping data local, SL may still be vulnerable to model inversion or membership inference attacks through shared parameters. While SL improves over federated learning by reducing single-point-of-failure risk, full protection against adversarial behavior may require integrating differential privacy and further cryptographic safeguards, which were not part of current implementations.
 
-**5. Regulatory and Ethical Considerations**
+### Regulatory and Ethical Considerations
 Cross-border collaboration on medical data—even without sharing raw data—must align with diverse legal frameworks such as GDPR, HIPAA, and institutional review policies. SL’s design is compatible with many regulations in theory, but legal interpretations may vary and affect adoption in practice.
 
-**6. Lack of Standardization and Validation**
+### Lack of Standardization and Validation
 SL has been successfully demonstrated in use cases such as colorectal cancer histopathology, leukemia classification, and COVID-19 transcriptomics, but broader validation across clinical settings and data types is still lacking. Especially in critical applications, robust external validation and clinical benchmarking are essential before deployment.
 
 ---
