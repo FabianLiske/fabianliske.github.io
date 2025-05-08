@@ -50,6 +50,8 @@ By design, Swarm Learning ensures:
 ![Fig. 1 - ML Techniques](/docs/assets/images/ml-techniken.png)
 *Fig 1: ML Techniques*
 
+---
+
 ## Benefits of Swarm Learning in Medical AI
 
 Swarm Learning (SL) offers a number of concrete benefits for the development and deployment of AI in healthcare settings, especially when data privacy, decentralization, and regulatory compliance are critical concerns.
@@ -73,6 +75,8 @@ SL models exhibit greater consistency and plausibility in their predictions. Rea
 ### Resilience to bias and heterogeneity
 
 SL performs robustly across heterogeneous datasets from multiple institutions, showing resistance to batch effects and technical variations. This improves model generalizability across different clinical settings and populations.
+
+---
 
 ## Usage in Medical AI
 
@@ -119,7 +123,13 @@ Several realistic scenarios were tested:
 
 These results show that SL not only protects patient privacy but also enhances model generalization and robustness, particularly in scenarios with data imbalance or low signal strength. This makes SL highly suitable for collaborative AI efforts in infectious disease diagnostics, especially where data decentralization is the norm.
 
+---
+
 ## Challenges
+
+Platzhalter
+
+---
 
 ## Sources
 
