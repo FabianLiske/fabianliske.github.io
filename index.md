@@ -47,8 +47,6 @@ By design, Swarm Learning ensures:
 - Democratization: Equal participation rights among collaborators.
 - Security: Smart contracts regulate membership and consensus.
 
-In summary, Swarm Learning provides a robust technical foundation for confidential and collaborative AI development, especially suitable for sensitive domains like medicine where data sharing is legally restricted but collaboration is essential.
-
 ![Fig. 1 - ML Techniques](/docs/assets/images/ml-techniken.png)
 *Fig 1: ML Techniques*
 
@@ -78,4 +76,18 @@ SL performs robustly across heterogeneous datasets from multiple institutions, s
 
 ## Usage in Medical AI
 
+### SL in Cancer Histopathology
+
+
+
+### SL in Detection of Leukaemia
+
+### SL in Detection of Tuberculosis
+
 ## Challenges
+
+## Sources
+
+[Swarm Learning: A Survey of Concepts, Applications and Trends](https://arxiv.org/abs/2405.00556)
+[Swarm learning for decentralized artificial intelligence in cancer histopathology](https://doi.org/10.1038/s41591-022-01768-5)
+[Swarm Learning for decentralized and confidential clinical machine learning](https://doi.org/10.1038/s41586-021-03583-3)
