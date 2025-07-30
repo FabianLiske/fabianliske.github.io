@@ -5,32 +5,32 @@ title: Swarm Learning in Medical AI
 
 ## The Importance of Medical AI
 
-The healthcare sector is under increasing pressure: populations are aging, chronic diseases are on the rise, and many regions face a shortage of medical specialists — particularly in fields like radiology, pathology, and oncology. Artificial intelligence (AI) offers a powerful way to help close this gap. AI systems can analyze medical images, genomic data, or electronic health records at scale, supporting physicians in diagnosing diseases earlier and more accurately, triaging patients, and even predicting treatment responses.
+The healthcare sector is under increasing pressure: populations are aging, chronic diseases are on the rise, and many regions face a shortage of medical specialists. Particularly in fields like radiology, pathology, and oncology. Artificial intelligence (AI) offers a powerful way to help close this gap. AI systems can analyze medical images, genomic data, or electronic health records at scale. Supporting physicians in diagnosing diseases earlier and more accurately, triaging patients, and even predicting treatment responses.
 
-In areas with limited access to expert care, AI can act as a virtual second opinion or a diagnostic assistant, helping to reduce disparities in healthcare quality. Moreover, AI can handle time-consuming tasks, such as image annotation or documentation, freeing up valuable time for direct patient interaction.
+In areas with limited access to expert care, AI can act as a virtual second opinion or a diagnostic assistant, helping to reduce disparities in healthcare quality. Moreover, AI can handle time consuming tasks, such as image annotation or documentation, freeing up valuable time for direct patient interaction.
 
-But while the potential of AI in medicine is widely recognized, its implementation is often slowed. As healthcare is inherently decentralized, data is usually decentralized as well. Data privacy regulations and ethical concerns also hinder the creation of large, centralized datasets for training medical AI models. Swarm Learning offers a promising solution to these challenges - enabling collaborative AI development without the need to share raw patient data.
-
+While the potential of AI in medicine is widely recognized, its implementation is often slowed. As healthcare is inherently decentralized, data is usually decentralized as well. Data privacy regulations and ethical concerns also hinder the creation of large, centralized datasets for training medical AI models. Swarm Learning offers a promising solution to these challenges. It enables collaborative AI development without the need to share raw patient data.
+Folie 3. Übersichtsgrafik? Maybe, low prio.
 ---
 
 ## What is Swarm Learning
 
-In conventional machine learning, especially in healthcare, models are often trained on data that has been centralized — typically collected and stored in large data centers or cloud platforms. While this setup can be effective, it raises major concerns around data privacy, ownership, and compliance with regulations like GDPR or HIPAA.
-
+In conventional machine learning, especially in healthcare, models are often trained on data that has been centralized. Typically collected and stored in large data centers or cloud platforms. While this setup can be effective, it raises major concerns around data privacy, ownership, and compliance with regulations like GDPR or HIPAA.
+**Folie 4**
 ### Local Learning
-
+**Folie 8**
 Every participant can create their own model using their own data (Fig 1a). However this will result in worse models if the amount of data ervery participant has is insufficient, but no data has to be shared.
 
 ### Centralized Learning
-
+**Folie 9**
 If all data can be centralized the training of a model can also be performed on a central copmute resource, for example in the cloud (Fig 1b). This typically results in better performance than locally trained models.
 
 ### Federated Learning
-
-Federated Learnign (FL, Fig 1c) combines Local and Centralized Learning. The models are trained locally on locally stored data and the resulting model parameters are stored on a centralized server. While the users don't need to share their data centrally, there remains a central authority managing the model.
+**Folie 10**
+Federated Learning (FL, Fig 1c) combines Local and Centralized Learning. The models are trained locally on locally stored data and the resulting model parameters are stored on a centralized server. While the users don't (no 't in scientific texts ja?) need to share their data centrally, there remains a central authority managing the model.
 
 ### Swarm Learning
-
+**Folie 11 und deep dive. Inhaltlich evtl ausbauen, da an sich größter Fokuspunkt?**
 Swarm Learning (SL) is a decentralized machine learning framework that combines edge computing with blockchain technology to enable secure, privacy-preserving, and collaborative model training. Unlike traditional federated learning, which relies on a central server for model coordination and aggregation, SL operates without any central authority. Instead, it employs a permissioned blockchain network to orchestrate peer-to-peer interactions, allowing participants (nodes) to dynamically join, contribute, and govern the model collaboratively.
 
 Each participating node in the SL network trains a local instance of a machine learning model on its own private data. At predefined synchronization intervals, the model parameters—not the data—are exchanged among the peers. The parameters are merged into a shared global model using a consensus algorithm (typically a weighted average), and the updated parameters are then redistributed to all nodes for the next training iteration. This process is governed through smart contracts on a blockchain, which ensures transparency, auditability, and fairness in coordination.
@@ -86,7 +86,7 @@ SL performs robustly across heterogeneous datasets from multiple institutions, s
 
 Cancer histopathology - analyzing stained tissue slides under the microscope - is a cornerstone of cancer diagnosis. With the advent of digital pathology and AI, researchers have begun to explore how deep learning models can extract subtle, clinically relevant patterns from these high-resolution images. However, developing robust AI systems requires training on large and diverse datasets, which is often impossible due to legal and logistical barriers to data sharing between institutions.
 
-SL addresses these challenges by enabling multiple pathology centers to collaboratively train AI models without moving data outside institutional boundaries. In a landmark study, Saldanha et al. demonstrated the use of SL to predict clinically important molecular features in colorectal cancer - specifically BRAF mutational status and microsatellite instability (MSI) - directly from hematoxylin and eosin (H&E)-stained slides.
+SL addresses these challenges by enabling multiple pathology centers to collaboratively train AI models without moving data outside institutional boundaries. In a landmark study, Saldanha et al. demonstrated the use of SL to predict clinically important molecular features in colorectal cancer, specifically BRAF mutational status and microsatellite instability (MSI), directly from hematoxylin and eosin (H&E)-stained slides.
 
 Three large datasets from institutions in Northern Ireland, Germany, and the United States were used, each stored on physically separate servers. Each node trained a local model and participated in periodic synchronization rounds via a blockchain-based SL network. The study compared locally trained models, a centralized (merged) model, and various SL models (both basic and weighted).
 
