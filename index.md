@@ -49,8 +49,8 @@ By design, Swarm Learning ensures:
 - Democratization: Equal participation rights among collaborators.
 - Security: Smart contracts regulate membership and consensus.
 
-![Fig. 1 - ML Techniques](/docs/assets/images/ml-techniken.png)
-*Fig 1: ML Techniques*
+![Fig. 1 - ML Techniques](/docs/assets/images/3_ml-techniken.png)
+*Fig 1: ML Techniques [[3]](#references)*
 
 ---
 
@@ -151,10 +151,10 @@ SL has been successfully demonstrated in use cases such as colorectal cancer his
 
 ---
 
-## Sources
+## References
 
-[Swarm Learning: A Survey of Concepts, Applications and Trends](https://arxiv.org/abs/2405.00556)
+[1] [Shammar, Elham, Xiaohui Cui, and Mohammed AA Al-qaness. "Swarm learning: A survey of concepts, applications, and trends." arXiv preprint arXiv:2405.00556 (2024).](https://arxiv.org/abs/2405.00556)
 
-[Swarm learning for decentralized artificial intelligence in cancer histopathology](https://doi.org/10.1038/s41591-022-01768-5)
+[2] [Saldanha, O.L., Quirke, P., West, N.P. et al. Swarm learning for decentralized artificial intelligence in cancer histopathology. Nat Med 28, 1232–1239 (2022).](https://doi.org/10.1038/s41591-022-01768-5)
 
-[Swarm Learning for decentralized and confidential clinical machine learning](https://doi.org/10.1038/s41586-021-03583-3)
+[3] [Warnat-Herresthal, S., Schultze, H., Shastry, K.L. et al. Swarm Learning for decentralized and confidential clinical machine learning. Nature 594, 265–270 (2021).](https://doi.org/10.1038/s41586-021-03583-3)
