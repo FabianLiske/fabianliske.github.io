@@ -11,6 +11,8 @@ In areas with limited access to expert care, AI can act as a virtual second opin
 
 But while the potential of AI in medicine is widely recognized, its implementation is often slowed. As healthcare is inherently decentralized, data is usually decentralized as well. Data privacy regulations and ethical concerns also hinder the creation of large, centralized datasets for training medical AI models. Swarm Learning offers a promising solution to these challenges - enabling collaborative AI development without the need to share raw patient data.
 
+---
+
 ## What is Swarm Learning
 
 In conventional machine learning, especially in healthcare, models are often trained on data that has been centralized — typically collected and stored in large data centers or cloud platforms. While this setup can be effective, it raises major concerns around data privacy, ownership, and compliance with regulations like GDPR or HIPAA.
@@ -47,12 +49,14 @@ By design, Swarm Learning ensures:
 - Democratization: Equal participation rights among collaborators.
 - Security: Smart contracts regulate membership and consensus.
 
-![Fig. 1 - ML Techniques](/docs/assets/images/ml-techniken.png)
-*Fig 1: ML Techniques*
+![Fig. 1 - ML Techniques](/docs/assets/images/3_ml-techniken.png)
+*Fig 1: ML Techniques [[3]](#references)*
+
+---
 
 ## Benefits of Swarm Learning in Medical AI
 
-Swarm Learning (SL) offers a number of concrete benefits for the development and deployment of AI in healthcare settings, especially when data privacy, decentralization, and regulatory compliance are critical concerns.
+SL offers a number of concrete benefits for the development and deployment of AI in healthcare settings, especially when data privacy, decentralization, and regulatory compliance are critical concerns.
 
 ### Privacy-preserving collaboration
 
@@ -73,6 +77,8 @@ SL models exhibit greater consistency and plausibility in their predictions. Rea
 ### Resilience to bias and heterogeneity
 
 SL performs robustly across heterogeneous datasets from multiple institutions, showing resistance to batch effects and technical variations. This improves model generalizability across different clinical settings and populations.
+
+---
 
 ## Usage in Medical AI
 
@@ -119,10 +125,36 @@ Several realistic scenarios were tested:
 
 These results show that SL not only protects patient privacy but also enhances model generalization and robustness, particularly in scenarios with data imbalance or low signal strength. This makes SL highly suitable for collaborative AI efforts in infectious disease diagnostics, especially where data decentralization is the norm.
 
-## Challenges
+---
 
-## Sources
+## Challenges of Swarm Learning in Medical AI
 
-[Swarm Learning: A Survey of Concepts, Applications and Trends](https://arxiv.org/abs/2405.00556)
-[Swarm learning for decentralized artificial intelligence in cancer histopathology](https://doi.org/10.1038/s41591-022-01768-5)
-[Swarm Learning for decentralized and confidential clinical machine learning](https://doi.org/10.1038/s41586-021-03583-3)
+While SL holds great promise for privacy-preserving, decentralized AI in healthcare, several technical and practical challenges remain before its widespread clinical deployment.
+
+### Infrastructure and Implementation Complexity
+Establishing a functional SL network requires substantial coordination across institutions. Nodes must maintain synchronized hardware capabilities and networking infrastructure to support training and communication, including integration of blockchain-based parameter exchange. Embedding SL nodes into existing clinical systems across international healthcare providers is a significant logistical undertaking that has not yet been widely tested outside of controlled research settings.
+
+### Model Performance and Scaling
+SL models often perform comparably to centrally trained models, but achieving optimal performance still depends on training data size and distribution. When cohorts are small, model performance may degrade unless strategies like weighted SL are applied. Moreover, performance parity with centralized models is harder to maintain in scenarios involving heterogeneous data sources or imaging modalities.
+
+### Governance and Fair Collaboration
+Although SL removes the need for a central coordinator, it introduces new governance questions: How are model contributions quantified and rewarded? How are model weights balanced among datasets of varying quality or size? Fairness mechanisms such as weighting by cohort size exist, but broader governance frameworks remain underdeveloped.
+
+### Privacy and Security Risks
+Despite keeping data local, SL may still be vulnerable to model inversion or membership inference attacks through shared parameters. While SL improves over federated learning by reducing single-point-of-failure risk, full protection against adversarial behavior may require integrating differential privacy and further cryptographic safeguards, which were not part of current implementations.
+
+### Regulatory and Ethical Considerations
+Cross-border collaboration on medical data - even without sharing raw data - must align with diverse legal frameworks such as GDPR, HIPAA, and institutional review policies. SL’s design is compatible with many regulations in theory, but legal interpretations may vary and affect adoption in practice.
+
+### Lack of Standardization and Validation
+SL has been successfully demonstrated in use cases such as colorectal cancer histopathology, leukemia classification, and COVID-19 transcriptomics, but broader validation across clinical settings and data types is still lacking. Especially in critical applications, robust external validation and clinical benchmarking are essential before deployment.
+
+---
+
+## References
+
+[1] [Shammar, Elham, Xiaohui Cui, and Mohammed AA Al-qaness. "Swarm learning: A survey of concepts, applications, and trends." arXiv preprint arXiv:2405.00556 (2024).](https://arxiv.org/abs/2405.00556)
+
+[2] [Saldanha, O.L., Quirke, P., West, N.P. et al. Swarm learning for decentralized artificial intelligence in cancer histopathology. Nat Med 28, 1232–1239 (2022).](https://doi.org/10.1038/s41591-022-01768-5)
+
+[3] [Warnat-Herresthal, S., Schultze, H., Shastry, K.L. et al. Swarm Learning for decentralized and confidential clinical machine learning. Nature 594, 265–270 (2021).](https://doi.org/10.1038/s41586-021-03583-3)
