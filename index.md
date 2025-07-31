@@ -10,27 +10,21 @@ The healthcare sector is under increasing pressure: populations are aging, chron
 In areas with limited access to expert care, AI can act as a virtual second opinion or a diagnostic assistant, helping to reduce disparities in healthcare quality. Moreover, AI can handle time consuming tasks, such as image annotation or documentation, freeing up valuable time for direct patient interaction.
 
 While the potential of AI in medicine is widely recognized, its implementation is often slowed. As healthcare is inherently decentralized, data is usually decentralized as well. Data privacy regulations and ethical concerns also hinder the creation of large, centralized datasets for training medical AI models. Swarm Learning offers a promising solution to these challenges. It enables collaborative AI development without the need to share raw patient data.
-Folie 3. Übersichtsgrafik? Maybe, low prio.
 ---
 
 ## What is Swarm Learning
 
 In conventional machine learning, especially in healthcare, models are often trained on data that has been centralized. Typically collected and stored in large data centers or cloud platforms. While this setup can be effective, it raises major concerns around data privacy, ownership, and compliance with regulations like GDPR or HIPAA.
-**Folie 4**
 ### Local Learning
-**Folie 8**
 Every participant can create their own model using their own data (Fig 1a). However this will result in worse models if the amount of data ervery participant has is insufficient, but no data has to be shared.
 
 ### Centralized Learning
-**Folie 9**
 If all data can be centralized the training of a model can also be performed on a central copmute resource, for example in the cloud (Fig 1b). This typically results in better performance than locally trained models.
 
 ### Federated Learning
-**Folie 10**
-Federated Learning (FL, Fig 1c) combines Local and Centralized Learning. The models are trained locally on locally stored data and the resulting model parameters are stored on a centralized server. While the users don't (no 't in scientific texts ja?) need to share their data centrally, there remains a central authority managing the model.
+Federated Learning (FL, Fig 1c) combines Local and Centralized Learning. The models are trained locally on locally stored data and the resulting model parameters are stored on a centralized server. While the users don't need to share their data centrally, there remains a central authority managing the model.
 
 ### Swarm Learning
-**Folie 11 und deep dive. Inhaltlich evtl ausbauen, da an sich größter Fokuspunkt?**
 Swarm Learning (SL) is a decentralized machine learning framework that combines edge computing with blockchain technology to enable secure, privacy-preserving, and collaborative model training. Unlike traditional federated learning, which relies on a central server for model coordination and aggregation, SL operates without any central authority. Instead, it employs a permissioned blockchain network to orchestrate peer-to-peer interactions, allowing participants (nodes) to dynamically join, contribute, and govern the model collaboratively.
 
 Each participating node in the SL network trains a local instance of a machine learning model on its own private data. At predefined synchronization intervals, the model parameters—not the data—are exchanged among the peers. The parameters are merged into a shared global model using a consensus algorithm (typically a weighted average), and the updated parameters are then redistributed to all nodes for the next training iteration. This process is governed through smart contracts on a blockchain, which ensures transparency, auditability, and fairness in coordination.
@@ -72,7 +66,7 @@ SL improves the data efficiency of AI training. Even when each participating nod
 
 ### Explainability and robustness
 
-SL models exhibit greater consistency and plausibility in their predictions. Reader studies have shown that image regions highlighted by SL models for decision-making often contain histologically relevant features, indicating that these models learn meaningful and interpretable representations.
+SL models exhibit greater consistency and plausibility in their predictions. Reader studies have shown that image regions highlighted by SL models for decision-making often contain histologically relevant features. Indicating that these models learn meaningful and interpretable representations.
 
 ### Resilience to bias and heterogeneity
 
