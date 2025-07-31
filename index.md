@@ -5,9 +5,9 @@ title: Swarm Learning in Medical AI
 
 ## The Importance of Medical AI
 
-The healthcare sector is under increasing pressure: populations are aging, chronic diseases are on the rise, and many regions face a shortage of medical specialists. Particularly in fields like radiology, pathology, and oncology. Artificial intelligence (AI) offers a powerful way to help close this gap. AI systems can analyze medical images, genomic data, or electronic health records at scale. Supporting physicians in diagnosing diseases earlier and more accurately, triaging patients, and even predicting treatment responses.
+The healthcare sector is under increasing pressure: populations are aging, chronic diseases are on the rise, and many regions face a shortage of medical specialists. Particularly in fields like radiology, pathology, and oncology. Artificial intelligence (AI) offers a powerful way to help close this gap. AI systems can analyze medical images, genomic data, or electronic health records at scale, supporting physicians in diagnosing diseases earlier and more accurately, triaging patients, and even predicting treatment responses.
 
-In areas with limited access to expert care, AI can act as a virtual second opinion or a diagnostic assistant, helping to reduce disparities in healthcare quality. Moreover, AI can handle time consuming tasks, such as image annotation or documentation, freeing up valuable time for direct patient interaction.
+In areas with limited access to expert care, AI can act as a virtual second opinion or a diagnostic assistant, helping to reduce disparities in healthcare quality. AI can handle time consuming tasks, such as image annotation or documentation, freeing up valuable time for direct patient interaction.
 
 While the potential of AI in medicine is widely recognized, its implementation is often slowed. As healthcare is inherently decentralized, data is usually decentralized as well. Data privacy regulations and ethical concerns also hinder the creation of large, centralized datasets for training medical AI models. Swarm Learning offers a promising solution to these challenges. It enables collaborative AI development without the need to share raw patient data.
 
@@ -16,25 +16,36 @@ While the potential of AI in medicine is widely recognized, its implementation i
 ## What is Swarm Learning
 
 In conventional machine learning, especially in healthcare, models are often trained on data that has been centralized. Typically collected and stored in large data centers or cloud platforms. While this setup can be effective, it raises major concerns around data privacy, ownership, and compliance with regulations like GDPR or HIPAA.
+
+![Fig. 1 - ML Techniques](/docs/assets/images/3_ml-techniken.png)
+*Fig 1: ML Techniques [[3]](#references)*
+
 ### Local Learning
+
 Every participant can create their own model using their own data (Fig 1a). However this will result in worse models if the amount of data ervery participant has is insufficient, but no data has to be shared.
 
 ### Centralized Learning
+
 If all data can be centralized the training of a model can also be performed on a central copmute resource, for example in the cloud (Fig 1b). This typically results in better performance than locally trained models.
 
 ### Federated Learning
+
 Federated Learning (FL, Fig 1c) combines Local and Centralized Learning. The models are trained locally on locally stored data and the resulting model parameters are stored on a centralized server. While the users don't need to share their data centrally, there remains a central authority managing the model.
 
 ### Swarm Learning
-Swarm Learning (SL) is a decentralized machine learning framework that combines edge computing with blockchain technology to enable secure, privacy-preserving, and collaborative model training. Unlike traditional federated learning, which relies on a central server for model coordination and aggregation, SL operates without any central authority. Instead, it employs a permissioned blockchain network to orchestrate peer-to-peer interactions, allowing participants (nodes) to dynamically join, contribute, and govern the model collaboratively.
 
-Each participating node in the SL network trains a local instance of a machine learning model on its own private data. At predefined synchronization intervals, the model parameters, not the data, are exchanged among the peers. The parameters are merged into a shared global model using a consensus algorithm (typically a weighted average), and the updated parameters are then redistributed to all nodes for the next training iteration. This process is governed through smart contracts on a blockchain, which ensures transparency, auditability, and fairness in coordination.
+Swarm Learning (SL) is a decentralized machine learning framework that combines edge computing with blockchain technology to enable secure, privacy-preserving, and collaborative model training. Unlike traditional federated learning, which relies on a central server for model coordination and aggregation, Swarm Learning operates without any central authority. Instead, it employs a permissioned blockchain network to orchestrate peer-to-peer interactions, allowing participants (nodes) to dynamically join, contribute, and govern the model collaboratively.
 
-The SL framework consists of two key layers:
+Each participating node in the Swarm Learning network trains a local instance of a machine learning model on its own private data. At predefined synchronization intervals, the model parameters, not the data, are exchanged among the peers. The parameters are merged into a shared global model using a consensus algorithm (typically a weighted average), and the updated parameters are then redistributed to all nodes for the next training iteration. This process is governed through smart contracts on a blockchain, which ensures transparency, auditability, and fairness in coordination.
+
+![Fig. 2 - SL Architecture](/docs/assets/images/2_sll-network.png)
+*Fig 2: SL Achritecture [[2]](#references)*
+
+The Swarm Learning framework consists of two key layers:
 1. Application layer - containing the machine learning model and task-specific logic.
 2. Middleware layer - comprising the Swarm Learning Library (SLL), the Swarm API, and the blockchain-based orchestration mechanisms.
 
-Warnat-Herresthal et al. used Docker Containers to simulate between 3 and 32 sperate nodes on a swarm network, each with its own dataset. Each node implented the SL framework and used a straightforward deep neural network using Keras to do the training. The models were trained for 100 epochs an vorying batch sizes.
+Warnat-Herresthal et al. used Docker Containers to simulate between 3 and 32 sperate nodes on a swarm network, each with its own dataset. Each node implented the Swarm Learning framework and used a straightforward deep neural network using Keras to do the training [[5](#references)]. The models were trained for 100 epochs an varying batch sizes.
 
 Crucially, SL supports the use of heterogeneous hardware and variable network conditions. It is implemented in Docker containers and supports execution on dedicated machines or clusters. Identity management and node authorization are enforced using frameworks like SPIRE (based on SPIFFE). Synchronization intervals, merging strategies, and weighting schemes are configurable to balance performance and computational efficiency.
 
@@ -43,9 +54,6 @@ By design, Swarm Learning ensures:
 - Resilience: No single point of failure due to decentralization.
 - Democratization: Equal participation rights among collaborators.
 - Security: Smart contracts regulate membership and consensus.
-
-![Fig. 1 - ML Techniques](/docs/assets/images/3_ml-techniken.png)
-*Fig 1: ML Techniques [[3]](#references)*
 
 ---
 
@@ -152,7 +160,7 @@ Establishing a functional Swarm Learning network requires substantial coordinati
 
 ### Lack of Standardization and Validation
 
-Swarm Learning has been successfully demonstrated in use cases such as colorectal cancer histopathology, leukemia classification, and COVID-19 transcriptomics, but broader validation across clinical settings and data types is still lacking. Especially in critical applications, robust external validation and clinical benchmarking are essential before deployment. [Hewlett Packard's Swarm Learning Library](https://github.com/HewlettPackard/swarm-learning) was a promising start but was turned into a community maintained project.
+Swarm Learning has been successfully demonstrated in use cases such as colorectal cancer histopathology, leukemia classification, and COVID-19 transcriptomics, but broader validation across clinical settings and data types is still lacking. Especially in critical applications, robust external validation and clinical benchmarking are essential before deployment. [Hewlett Packard's Swarm Learning Library](https://github.com/HewlettPackard/swarm-learning) was a promising start but was turned into a community maintained project [[6](#references)].
 
 ### Model Performance and Scaling
 
@@ -181,3 +189,7 @@ Cross-border collaboration on medical data, even without sharing raw data, must 
 [3] [Warnat-Herresthal, S., Schultze, H., Shastry, K.L. et al. Swarm Learning for decentralized and confidential clinical machine learning. Nature 594, 265–270 (2021).](https://doi.org/10.1038/s41586-021-03583-3)
 
 [4] [Liu, C.-L.; Dai, Y.-H. Bioinformatic Analyses of Peripheral Blood Transcriptome Identify Altered Neutrophil-Related Pathway and Different Transcriptomic Profiles for Acute Pancreatitis in Patients with and without Chylomicronemia Syndrome. Biomolecules 2023, 13, 284.](https://doi.org/10.3390/biom13020284)
+
+[5] [schultzelab/swarm_learning on Github](https://github.com/schultzelab/swarm_learning)
+
+[6] [HPE Developer Portal on HPE Swarm Learning Library](https://developer.hpe.com/platform/swarm-learning/home/)
