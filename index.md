@@ -89,16 +89,15 @@ SL performs robustly across heterogeneous datasets from multiple institutions, s
 
 Cancer histopathology, analyzing stained tissue slides under the microscope, is a cornerstone of cancer diagnosis. With the advent of digital pathology and AI, researchers have begun to explore how deep learning models can extract subtle, clinically relevant patterns from these high-resolution images. Developing and training these models requires large and diverse datasets, which are often impossible to gather due to legal and logisitcal barriers.
 
-![Fig. X - SL in Cancer Histopathology](/docs/assets/images/2_cancer-histopathology.png)
->*Fig X: SL in Cancer Histopathology [[2]](#references)*
+![Fig. 3 - SL in Cancer Histopathology](/docs/assets/images/2_cancer-histopathology.png)
+*Fig 3: SL in Cancer Histopathology [[2]](#references)*
 
 Swarm Learning addresses these challenges by enabling multiple pathology centers to collaboratively train AI models without moving data outside institutional boundaries. In a landmark study, Saldanha et al. demonstrated the use of Swarm Learning to predict clinically important molecular features in colorectal cancer, specifically BRAF mutational status and microsatellite instability (MSI) directly from hematoxylin and eosin stained slides.
 
 Three large datasets from institutions in Northern Ireland, Germany, and the United States were used, each stored on physically separate servers. Each node trained a local model and participated in periodic synchronization rounds via a blockchain-based Swarm Learning network. The study compared locally trained models, a centralized (merged) model, and various Swarm Learning models, both basic and weighted.
 
-![Fig. X - Comparison](/docs/assets/images/2_cancer-results.png)
-
-*Fig X: Comparison between local and swarm [[2]](#references)*
+![Fig. 4 - Comparison](/docs/assets/images/2_cancer-results.png)
+*Fig 4: Comparison between local and swarm [[2]](#references)*
 
 The findings were compelling:
 - Performance: Swarm Learning models consistently outperformed locally trained models and matched or exceeded the performance of the centrally trained model. For instance, the weighted Swarm Learning model achieved an AUROC of 0.7736 in BRAF mutation prediction, outperforming both the best local model and the merged model.
@@ -110,15 +109,15 @@ The findings were compelling:
 
 Leukemia diagnosis increasingly benefits from molecular profiling, particularly transcriptome analysis of blood cells which involves analyzing gene activity in blood cells. However, creating reliable AI-based classifiers requires large and diverse training datasets which are again difficult if not impossible to gather due to privacy regulations.
 
-![Fig. X - Blood Transcriptome](/docs/assets/images/4_blood-transcriptome.png)
->*Fig X: Blood Transcriptome [[4]](#references)*
+![Fig. 5 - Blood Transcriptome](/docs/assets/images/4_blood-transcriptome.png)
+*Fig 5: Blood Transcriptome [[4]](#references)*
 
 Warnat-Herresthal et al. demonstrated how Swarm Learning can overcome these barriers by enabling decentralized training of deep learning models on blood transcriptomes without data exchange. Using peripheral blood mononuclear cell (PBMC) transcriptomes from over 12,000 individuals across more than 100 clinical studies, they trained classifiers to detect acute myeloid leukemia (AML) and acute lymphoblastic leukemia (ALL).
 
 Each dataset was distributed across multiple SWarm Learning nodes, mimicking real-world institutional separation. The Swarm Learning framework allowed these nodes to collaboratively train a shared model.
 
-![Fig. X - Comparison](/docs/assets/images/3_leukemia-results.png)
->*Fig X: Comparison between individual nodes and the shared model [[3]](#references)*
+![Fig. 6 - Comparison](/docs/assets/images/3_leukemia-results.png)
+*Fig 6: Comparison between individual nodes and the shared model [[3]](#references)*
 
 Key results included:
 - Superior accuracy: Across various scenarios including imbalanced case-control distributions and different data modalities (microarrays, RNA-seq) Swarm Learning consistently outperformed locally trained models and often matched the performance of centrally trained models.
@@ -134,8 +133,8 @@ Tuberculosis remains one of the world’s leading infectious diseases, particula
 
 Using Swarm Learning, researchers demonstrated that robust Tuberculosis classifiers can be trained collaboratively without centralizing data. In their study, blood transcriptome datasets from nearly 2,000 individuals were distributed across Swarm Learning nodes simulating distinct institutions. Each node trained locally on its data while synchronizing model parameters over a blockchain network.
 
-![Fig. X - Comparison](/docs/assets/images/3_tb-results.png)
->*Fig X: Comparison between individual nodes and the shared model [[3]](#references)*
+![Fig. 7 - Comparison](/docs/assets/images/3_tb-results.png)
+*Fig 7: Comparison between individual nodes and the shared model [[3]](#references)*
 
 Several realistic scenarios were tested:
 - Balanced and imbalanced case distributions: Even when the number of active Tuberculosis cases varied widely between nodes, Swarm Learning maintained high classification performance, outperforming local models and often matching centralized models.
