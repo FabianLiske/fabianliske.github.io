@@ -147,6 +147,9 @@ These results show that Swarm Learning not only protects patient privacy but als
 
 Comparing model performance differences not only between models trained locally, centrally, and in a swarm but also across studies also shows promising results for the concept of Swarm Learning as a whole. It should be noted that the results are not directly comparable as the researches used different models and hyperparamters across the studies, but we took the freedom to compare them for similar node-counts and conditions anyways.
 
+![Fig. 8 - Comparing training approaches across the studies](/docs/assets/images/cross-study.png)
+*Fig 8: Comparing training approaches across the studies*
+
 ---
 
 ## Challenges of Swarm Learning in Medical AI
