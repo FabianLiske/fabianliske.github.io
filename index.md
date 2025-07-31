@@ -10,6 +10,7 @@ The healthcare sector is under increasing pressure: populations are aging, chron
 In areas with limited access to expert care, AI can act as a virtual second opinion or a diagnostic assistant, helping to reduce disparities in healthcare quality. Moreover, AI can handle time consuming tasks, such as image annotation or documentation, freeing up valuable time for direct patient interaction.
 
 While the potential of AI in medicine is widely recognized, its implementation is often slowed. As healthcare is inherently decentralized, data is usually decentralized as well. Data privacy regulations and ethical concerns also hinder the creation of large, centralized datasets for training medical AI models. Swarm Learning offers a promising solution to these challenges. It enables collaborative AI development without the need to share raw patient data.
+
 ---
 
 ## What is Swarm Learning
@@ -27,7 +28,7 @@ Federated Learning (FL, Fig 1c) combines Local and Centralized Learning. The mod
 ### Swarm Learning
 Swarm Learning (SL) is a decentralized machine learning framework that combines edge computing with blockchain technology to enable secure, privacy-preserving, and collaborative model training. Unlike traditional federated learning, which relies on a central server for model coordination and aggregation, SL operates without any central authority. Instead, it employs a permissioned blockchain network to orchestrate peer-to-peer interactions, allowing participants (nodes) to dynamically join, contribute, and govern the model collaboratively.
 
-Each participating node in the SL network trains a local instance of a machine learning model on its own private data. At predefined synchronization intervals, the model parameters—not the data—are exchanged among the peers. The parameters are merged into a shared global model using a consensus algorithm (typically a weighted average), and the updated parameters are then redistributed to all nodes for the next training iteration. This process is governed through smart contracts on a blockchain, which ensures transparency, auditability, and fairness in coordination.
+Each participating node in the SL network trains a local instance of a machine learning model on its own private data. At predefined synchronization intervals, the model parameters, not the data, are exchanged among the peers. The parameters are merged into a shared global model using a consensus algorithm (typically a weighted average), and the updated parameters are then redistributed to all nodes for the next training iteration. This process is governed through smart contracts on a blockchain, which ensures transparency, auditability, and fairness in coordination.
 
 The SL framework consists of two key layers:
 1. Application layer - containing the machine learning model and task-specific logic.
