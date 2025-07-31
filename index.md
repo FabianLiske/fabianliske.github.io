@@ -141,6 +141,10 @@ Several realistic scenarios were tested:
 
 These results show that Swarm Learning not only protects patient privacy but also enhances model generalization and robustness, particularly in scenarios with data imbalance or low signal strength. This makes Swarm Learning highly suitable for collaborative AI efforts in infectious disease diagnostics where data decentralization is the norm.
 
+### SL vs Local vs Central
+
+Comparing model performance differences not only between models trained locally, centrally, and in a swarm but also across studies also shows promising results for the concept of Swarm Learning as a whole. It should be noted that the results are not directly comparable as the researches used different models and hyperparamters across the studies, but we took the freedom to compare them for similar node-counts and conditions anyways.
+
 ---
 
 ## Challenges of Swarm Learning in Medical AI
@@ -148,22 +152,28 @@ These results show that Swarm Learning not only protects patient privacy but als
 While SL holds great promise for privacy-preserving, decentralized AI in healthcare, several technical and practical challenges remain before its widespread clinical deployment.
 
 ### Infrastructure and Implementation Complexity
-Establishing a functional SL network requires substantial coordination across institutions. Nodes must maintain synchronized hardware capabilities and networking infrastructure to support training and communication, including integration of blockchain-based parameter exchange. Embedding SL nodes into existing clinical systems across international healthcare providers is a significant logistical undertaking that has not yet been widely tested outside of controlled research settings.
 
-### Model Performance and Scaling
-SL models often perform comparably to centrally trained models, but achieving optimal performance still depends on training data size and distribution. When cohorts are small, model performance may degrade unless strategies like weighted SL are applied. Moreover, performance parity with centralized models is harder to maintain in scenarios involving heterogeneous data sources or imaging modalities.
-
-### Governance and Fair Collaboration
-Although SL removes the need for a central coordinator, it introduces new governance questions: How are model contributions quantified and rewarded? How are model weights balanced among datasets of varying quality or size? Fairness mechanisms such as weighting by cohort size exist, but broader governance frameworks remain underdeveloped.
-
-### Privacy and Security Risks
-Despite keeping data local, SL may still be vulnerable to model inversion or membership inference attacks through shared parameters. While SL improves over federated learning by reducing single-point-of-failure risk, full protection against adversarial behavior may require integrating differential privacy and further cryptographic safeguards, which were not part of current implementations.
-
-### Regulatory and Ethical Considerations
-Cross-border collaboration on medical data - even without sharing raw data - must align with diverse legal frameworks such as GDPR, HIPAA, and institutional review policies. SL’s design is compatible with many regulations in theory, but legal interpretations may vary and affect adoption in practice.
+Establishing a functional Swarm Learning network requires substantial coordination across institutions. Nodes must maintain similar hardware capabilities and networking infrastructure to support training and communication, including integration of blockchain-based parameter exchange. Embedding Swarm Learning nodes into existing clinical systems across international healthcare providers is a significant logistical undertaking that has not yet been widely tested outside of controlled research settings. Continuously sinking costs of compute, especially for AI with neural accelerators becoming more widespread, allows for the development of pre-configured nodes at a procepoint that could be attractive for medical institutions. Unfortunately we were unable to find any examples for "Swarm Learning nodes as an appliance", presumably due to the lack of standardization.
 
 ### Lack of Standardization and Validation
-SL has been successfully demonstrated in use cases such as colorectal cancer histopathology, leukemia classification, and COVID-19 transcriptomics, but broader validation across clinical settings and data types is still lacking. Especially in critical applications, robust external validation and clinical benchmarking are essential before deployment.
+
+Swarm Learning has been successfully demonstrated in use cases such as colorectal cancer histopathology, leukemia classification, and COVID-19 transcriptomics, but broader validation across clinical settings and data types is still lacking. Especially in critical applications, robust external validation and clinical benchmarking are essential before deployment. [Hewlett Packard's Swarm Learning Library](https://github.com/HewlettPackard/swarm-learning) was a promising start but was turned into a community maintained project.
+
+### Model Performance and Scaling
+
+Swarm Learning models often perform comparably to centrally trained models, but achieving optimal performance still depends on training data size and distribution. When cohorts are small, model performance may degrade unless strategies like weighted Swarm Learning are applied. Performance parity with centralized models is also harder to maintain in scenarios involving heterogeneous data sources or imaging modalities.
+
+### Governance and Fair Collaboration
+
+Although Swarm Learning removes the need for a central coordinator, it introduces new governance questions: How are model contributions quantified and rewarded? How are model weights balanced among datasets of varying quality or size? Fairness mechanisms such as weighting by dataset size exist, but broader governance frameworks remain underexplored and underdeveloped.
+
+### Privacy and Security Risks
+
+Despite keeping data local, Swar Learning may still be vulnerable to model inversion or membership inference attacks through shared parameters. While Swarm Learning improves over federated learning by reducing single-point-of-failure risk, full protection against adversarial behavior may require integrating differential privacy and further cryptographic safeguards, which are not part of current implementations. The blockchain hosting the smart contract is another theoretical vector for an attack, but with increasing size of the blockchain network these attacks become increasingly more expensive and less likely.
+
+### Regulatory and Ethical Considerations
+
+Cross-border collaboration on medical data, even without sharing raw data, must align with diverse legal frameworks such as GDPR, HIPAA, and institutional review policies. Swarm Learnings's design is compatible with many regulations in theory, but legal interpretations may vary and affect adoption in practice.
 
 ---
 
